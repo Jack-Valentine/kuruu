@@ -12,6 +12,7 @@ app.set('view engine', 'handlebars');
 app.set('views', parentDir + '/views');
 
 app.use(express.static('assets'));
+app.use('/assets', express.static(parentDir + '/assets'));
 
 app.get('/', function (req, res) {
   res.render('index');
